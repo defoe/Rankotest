@@ -2,6 +2,7 @@
 
 class rankotest {
 	
+	// główna metoda parsująca plik xls i zwracająca dane json
 	public function parse_xls($xls_file)
 	{
 		if (file_exists($xls_file)) 
@@ -36,7 +37,8 @@ class rankotest {
 			die('Błąd: brak pliku XLS');
 		}
 	}
-
+	
+	// funkcja do tworzenia drzewka z tablicy xls
 	private function generate_tree($arr)
 	{
 		$tree = array();
@@ -74,7 +76,8 @@ class rankotest {
 		}
 		return $tree;
 	}
-
+	
+	// funkcja do przeindeksowania tablicy drzewka
 	private function reindex_array($arr)
 	{
 		$finalArray = array();
